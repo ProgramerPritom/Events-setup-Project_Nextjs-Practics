@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import EventList from '../component/events/EventList';
+import EventSearch from '../component/events/EventSearch';
 import { getFeaturedEvents } from '../dammyData';
 
 const index = () => {
   const featuredEvents = getFeaturedEvents();
   // console.log(featuredEvents);
   return (
-    <div>
+    <Fragment>
+      <EventSearch></EventSearch>
       <EventList items={featuredEvents}></EventList>
-    </div>
+    </Fragment>
   );
 };
 
